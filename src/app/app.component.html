@@ -1,0 +1,63 @@
+<html class="full-html">
+  <head> 
+    <title> User Creation </title>
+  </head>
+  <body>
+    <div class="full-body">
+    <h1> Create new User </h1>
+    <hr>
+    <div id="priya">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" class="form-register"> 
+      <div class="form-group" style="text-align:center">
+        First Name
+        <input class="form-control" type="text" placeholder=" First Name" size="30px" ngModel required name="first name">
+        </div>
+        <hr>
+        <div class="form-group" style="text-align:center">
+        Last Name
+        <input class="form-control"type="text" placeholder=" Last Name" size="35px" ngModel required name="last name">
+      </div><hr>
+      <div class="form-group" style="text-align:center">
+       Age
+        <input class="form-control" type="text" placeholder="Age" size="35px" ngModel required name="age">
+      </div>
+      <hr>
+      <div class="form-group" style="text-align:center">
+       Gender
+       <select name="gen" class="form-control" name="gender">
+         <option value="select"> --select--</option>
+         <option value="male">Male</option>
+         <option value="female">Female</option>
+         <option value="transgender"> Transgender</option>
+         <option value ="pnot"> Ptefer Not to Say</option>
+       </select>
+      </div>
+      <hr>
+      <div class="form-group" style="text-align:center">
+        Mobile Number
+        <input class="form-control"type="text" placeholder="Number" size="35px" ngModel required name="Mobile Number">  
+      </div>
+      <hr>
+      <div style="text-align:center">
+         <button type="submit" onclick="alert('User Has Been Created')"[disabled]="!f.valid"> Submit </button>
+      </div>
+      </form>
+      </div>
+      </div>
+      <script>
+        <p>console.log(onSubmit());</p>
+      </script>
+    </body>
+</html>
+<app-register></app-register>
+<!--<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</form>-->
